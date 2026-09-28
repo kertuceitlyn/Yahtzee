@@ -99,8 +99,20 @@ class TestLargeStraight:
 
 class TestSmallStraight:
     def test_small_straight_basic(self):
-        """Write/extend test(s)"""
+        result = score_lower([2, 3, 2, 5, 4])
+        assert result["Small straight"] == 30
 
+    def test_small_straight_basic_2(self):
+        result = score_lower([2, 3, 3, 4, 5])
+        assert result["Small straight"] == 30
+
+    def test_not_small_straight(self):
+        result = score_lower([1, 2, 3, 5, 6])
+        assert result["Small straight"] == 0
+
+    def test_small_straight_edge_case(self):
+        result = score_lower([1, 2, 3, 4, 5])
+        assert result["Small straight"] == 0
 
 # ===========================================================================
 # Part 6 — Yahtzee (0.4 points)
