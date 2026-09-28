@@ -137,7 +137,16 @@ class TestYahtzee:
 
 class TestChance:
     def test_chance_basic(self):
-        """Write/extend test(s)"""
+        result = score_lower([1, 1, 2, 2, 5])
+        assert result["Chance"] == 11
+
+    def test_chance_basic_2(self):
+        result = score_lower([1, 1, 3, 5, 6])
+        assert result["Chance"] == 16
+
+    def test_not_chance(self):
+        result = score_lower([3, 3, 3, 2, 1])
+        assert result["Chance"] == 0
 
 # ===========================================================================
 # Part 8 — Complete score map + total_score (1.0 point)
