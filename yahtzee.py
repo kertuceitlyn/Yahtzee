@@ -90,11 +90,15 @@ def score_lower(dice):
         small_straight = 30
 
     # ------------------------------------------------------------------
-    # TODO Part 6: Implement "Yahtzee"
-    yahtzee = 0          # replace with your implementation
-
+    # Part 6: Implement "Yahtzee"
     # ------------------------------------------------------------------
-    # TODO Part 7: Implement "Chance"
+    yahtzee = 0
+    for count in counts.values():
+        if count == 5:
+            yahtzee = 50
+    
+    # ------------------------------------------------------------------
+    # Part 7: Implement "Chance"
     chance = 0           # replace with your implementation
 
     return {
