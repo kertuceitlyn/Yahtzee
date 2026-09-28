@@ -50,9 +50,12 @@ def score_lower(dice):
     total = sum(dice)
 
     # ------------------------------------------------------------------
-    # TODO Part 1: Implement "Three of a kind"
+    # Part 1: Implement "Three of a kind"
     # ------------------------------------------------------------------
-    three_of_a_kind = 0  # replace with your implementation
+    three_of_a_kind = 0
+    for count in counts.values():
+        if count >= 3:
+            three_of_a_kind = total
 
     # ------------------------------------------------------------------
     # TODO Part 2: Implement "Four of a kind"
