@@ -99,7 +99,14 @@ def score_lower(dice):
     
     # ------------------------------------------------------------------
     # Part 7: Implement "Chance"
-    chance = 0           # replace with your implementation
+    chance = 0
+    if (three_of_a_kind == 0 and 
+        four_of_a_kind == 0 and 
+        full_house == 0 and 
+        large_straight == 0 and 
+        small_straight == 0 and 
+        yahtzee == 0):
+        chance = total
 
     return {
         "Three of a kind": three_of_a_kind,
