@@ -42,7 +42,16 @@ class TestThreeOfAKind:
 
 class TestFourOfAKind:
     def test_four_of_a_kind_basic(self):
-        """Write/extend test(s)"""
+        result = score_lower([5, 5, 5, 5, 2])
+        assert result["Four of a kind"] == 22
+
+    def test_not_four_of_a_kind(self):
+        result = score_lower([5, 5, 5, 2, 2])
+        assert result["Four of a kind"] == 0
+
+    def test_four_of_a_kind_with_extra(self):
+        result = score_lower([6, 6, 6, 6, 6])
+        assert result["Four of a kind"] == 30
         
 
 # ===========================================================================
