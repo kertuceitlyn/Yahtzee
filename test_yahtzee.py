@@ -154,9 +154,22 @@ class TestChance:
 
 class TestCompleteScoreMap:
     def test_full_map_returned(self):
-        """score_lower must return ALL categories, with zeros for non-matching ones."""
+        result = score_lower([2, 2, 5, 5, 5])
+        assert result == {
+        "Three of a kind": 19,
+        "Four of a kind": 0,
+        "Full house": 25,
+        "Large straight": 0,
+        "Small straight": 0,
+        "Yahtzee": 0,
+        "Chance": 0,
+    }
 
 
 class TestTotalScore:
     def test_total_score_basic(self):
-        """Write/extend test(s)"""
+        result = total_score([
+            [2, 3, 4, 4, 4],
+            [6, 6, 6, 5, 5]
+            ])
+        assert result == 42
