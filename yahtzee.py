@@ -73,10 +73,12 @@ def score_lower(dice):
         full_house = 25
 
     # ------------------------------------------------------------------
-    # TODO Part 4: Implement "Large straight"
+    # Part 4: Implement "Large straight"
     # ------------------------------------------------------------------
     large_straight = 0   # replace with your implementation
-
+    if sorted(dice) == [1, 2, 3, 4, 5] or sorted(dice) == [2, 3, 4, 5, 6]:
+        large_straight = 40
+        
     # ------------------------------------------------------------------
     # TODO Part 5: Implement "Small straight"
     # ------------------------------------------------------------------
