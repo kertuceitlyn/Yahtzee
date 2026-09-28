@@ -142,4 +142,21 @@ def total_score(rounds):
     >>> total_score([[2, 3, 4, 4, 4], [6, 6, 6, 5, 5]])
     42
     """
-    return 0  # replace with your implementation
+
+    total = 0
+    used_categories = set()
+
+    for dice in rounds:
+        scores = score_lower(dice)
+        best_category = None
+        best_score = 0
+        for category, score in scores.items():
+            if category not in used_categories and score > best_score:
+                best_category = category
+                best_score = score
+
+        if best_category is not None:
+            total += best_score
+            used_categories.add(best_category)
+    return total
+

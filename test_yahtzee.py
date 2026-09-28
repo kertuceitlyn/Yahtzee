@@ -173,3 +173,20 @@ class TestTotalScore:
             [6, 6, 6, 5, 5]
             ])
         assert result == 42
+
+    def test_total_score_category_overlap(self):
+        result = total_score([
+            [3, 3, 3, 2, 1],
+            [4, 4, 4, 2, 1]
+            ])
+        assert result == 12
+
+    def test_total_score_chance(self):
+        result = total_score([
+            [1, 1, 2, 2, 4]
+        ])
+        assert result == 10
+
+    def test_total_score_empty(self):
+        result = total_score([])
+        assert result == 0
