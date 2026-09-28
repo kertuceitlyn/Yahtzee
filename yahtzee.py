@@ -78,11 +78,16 @@ def score_lower(dice):
     large_straight = 0   # replace with your implementation
     if sorted(dice) == [1, 2, 3, 4, 5] or sorted(dice) == [2, 3, 4, 5, 6]:
         large_straight = 40
-        
+
     # ------------------------------------------------------------------
-    # TODO Part 5: Implement "Small straight"
+    # Part 5: Implement "Small straight"
     # ------------------------------------------------------------------
     small_straight = 0   # replace with your implementation
+    if large_straight == 0 and (
+        set([1, 2, 3, 4]).issubset(dice) or
+        set([2, 3, 4, 5]).issubset(dice) or
+        set([3, 4, 5, 6]).issubset(dice)):
+        small_straight = 30
 
     # ------------------------------------------------------------------
     # TODO Part 6: Implement "Yahtzee"
