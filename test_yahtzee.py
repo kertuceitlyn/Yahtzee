@@ -60,7 +60,16 @@ class TestFourOfAKind:
 
 class TestFullHouse:
     def test_full_house_basic(self):
-        """Write/extend test(s)"""
+        result = score_lower([2, 2, 3, 3, 3])
+        assert result["Full house"] == 25
+
+    def test_not_full_house(self):
+        result = score_lower([2, 2, 2, 3, 4])
+        assert result["Full house"] == 0
+
+    def test_full_house_edge_case(self):
+        result = score_lower([4, 4, 4, 4, 4])
+        assert result["Full house"] == 0
 
 
 # ===========================================================================

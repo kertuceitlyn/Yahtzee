@@ -66,9 +66,10 @@ def score_lower(dice):
             four_of_a_kind = total
 
     # ------------------------------------------------------------------
-    # TODO Part 3: Implement "Full house"
+    # Part 3: Implement "Full house"
     # ------------------------------------------------------------------
-    full_house = 0       # replace with your implementation
+    full_house = 0
+    
 
     # ------------------------------------------------------------------
     # TODO Part 4: Implement "Large straight"
