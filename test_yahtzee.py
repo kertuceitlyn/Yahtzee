@@ -89,6 +89,10 @@ class TestLargeStraight:
         result = score_lower([1, 2, 3, 4, 6])
         assert result["Large straight"] == 0
 
+    def test_large_straight_unorganized(self):
+        result = score_lower([3, 5, 4, 2, 6])
+        assert result["Large straight"] == 40
+
 # ===========================================================================
 # Part 5 — Small straight (0.5 points)
 # ===========================================================================
