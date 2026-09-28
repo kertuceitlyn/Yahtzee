@@ -78,7 +78,16 @@ class TestFullHouse:
 
 class TestLargeStraight:
     def test_large_straight_basic(self):
-        """Write/extend test(s)"""
+        result = score_lower([2, 3, 4, 5, 6])
+        assert result["Large straight"] == 40
+
+    def test_large_straight_basic_2(self):
+        result = score_lower([1, 2, 3, 4, 5])
+        assert result["Large straight"] == 40
+
+    def test_not_large_straight(self):
+        result = score_lower([1, 2, 3, 4, 6])
+        assert result["Large straight"] == 0
 
 # ===========================================================================
 # Part 5 — Small straight (0.5 points)
