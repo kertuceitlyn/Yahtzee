@@ -120,7 +120,16 @@ class TestSmallStraight:
 
 class TestYahtzee:
     def test_yahtzee_basic(self):
-        """Write/extend test(s)"""
+        result = score_lower([6, 6, 6, 6, 6])
+        assert result["Yahtzee"] == 50
+
+    def test_yahtzee_basic_2(self):
+        result = score_lower([1, 1, 1, 1, 1])
+        assert result["Yahtzee"] == 50
+
+    def test_not_yahtzee(self):
+        result = score_lower([6, 6, 6, 6, 5])
+        assert result["Yahtzee"] == 0
 
 # ===========================================================================
 # Part 7 — Chance (0.5 points)
