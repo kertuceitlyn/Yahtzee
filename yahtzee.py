@@ -69,7 +69,8 @@ def score_lower(dice):
     # Part 3: Implement "Full house"
     # ------------------------------------------------------------------
     full_house = 0
-    
+    if 2 in counts.values() and 3 in counts.values():
+        full_house = 25
 
     # ------------------------------------------------------------------
     # TODO Part 4: Implement "Large straight"
