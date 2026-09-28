@@ -58,9 +58,12 @@ def score_lower(dice):
             three_of_a_kind = total
 
     # ------------------------------------------------------------------
-    # TODO Part 2: Implement "Four of a kind"
+    # Part 2: Implement "Four of a kind"
     # ------------------------------------------------------------------
-    four_of_a_kind = 0   # replace with your implementation
+    four_of_a_kind = 0
+    for count in counts.values():
+        if count >= 4:
+            four_of_a_kind = total
 
     # ------------------------------------------------------------------
     # TODO Part 3: Implement "Full house"
